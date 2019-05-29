@@ -1,6 +1,6 @@
 :root {
     --primary-color: #e50914;
-
+    --dark-color: #141414;
 }
 
 * {
@@ -37,6 +37,14 @@ img {
     width: 100%;
 }
 
+/* Container */
+.container {
+    max-width: 70%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
@@ -71,6 +79,57 @@ img {
     font-size: 1rem;
     padding: .8rem 1.3rem;
     text-transform: uppercase;
+}
+
+/* Text Styles */
+.text-xl {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-dark {
+    color: #999;
+}
+
+.text-md {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Table */
+.table {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.table thead th {
+    text-transform: uppercase;
+    padding: .8rem;
+}
+
+.table tbody tr td {
+    color: #999;
+    padding: .8rem 1.2rem;
+    text-align: center;
+}
+
+.table tbody tr td:first-child {
+    text-align: left;
+}
+
+.table tbody tr:nth-child(odd) {
+    background: #222;
 }
 
 /* ============= Showcase =============== */
@@ -140,4 +199,70 @@ img {
     font-size: 1.9rem;
     line-height: 1.25;
     margin: 0 0 2rem;
+}
+
+/* ========== Tabs ============== */
+.tabs {
+    background: var(--dark-color);
+    padding-top: 1rem;
+    border-bottom: 3px solid #3d3d3d;
+}
+
+.tabs .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tabs .container > div {
+    padding: 1.5rem 0;
+}
+
+.tabs .container > div:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.tabs p {
+    font-size: 1.2rem;
+    padding-top: .5rem;
+}
+
+.tab-border {
+    border-bottom: var(--primary-color) 4px solid;
+}
+
+#tab-1-content .tab-1-content-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-content {
+    padding: 3px 0;
+    background: #000;
+    color: #fff;
+}
+
+#tab-2-content .tab-2-content-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#tab-2-content .tab-2-content-bottom {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

@@ -235,6 +235,17 @@ img {
     border-bottom: var(--primary-color) 4px solid;
 }
 
+/* Hide content initially */
+#tab-1-content,
+#tab-2-content,
+#tab-3-content {
+    display: none;
+}
+
+.show {
+    display: block!important;
+}
+
 #tab-1-content .tab-1-content-inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -316,6 +327,10 @@ footer li {
     .btn-xl {
         font-size: 1.5rem;
         padding: 1.4rem 2rem;
+    }
+
+    .btn-icon {
+        margin-left: 1rem;
     }
 
     .text-xl {
